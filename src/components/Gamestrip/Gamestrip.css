@@ -10,7 +10,6 @@
   max-width: 1020px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 80px;
 }
@@ -37,13 +36,14 @@
 .Gamestrip__team {
   flex-grow: 1;
   display: flex;
-  align-items: center;
   position: relative;
 }
 
 .Gamestrip__team-info {
   display: flex;
   flex-direction: column;
+  height: 80px;
+  justify-content: center;
   z-index: 4;
 }
 
@@ -61,6 +61,7 @@
   height: 42px;
   width: 42px;
   z-index: 4;
+  align-self: center;
 }
 
 .Gamestrip__banner {
