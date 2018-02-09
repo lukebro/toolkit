@@ -1,0 +1,60 @@
+.StripeInfoCard {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.18);
+  padding: 3em 4em 3em 8em;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s transform;
+}
+
+.StripeInfoCard:hover {
+  transform: translateY(-3px);
+}
+
+.StripeInfoCard:hover .StripeInfoCard__title {
+  color: #32325C;
+}
+
+.hover-fillLight, .hover-fillDark {
+  transition: 0.2s fill ease;
+}
+
+.StripeInfoCard:hover .hover-fillLight {
+  fill: #8798AA;
+}
+
+.StripeInfoCard:hover .hover-fillDark {
+  fill: #32325d;
+}
+
+.StripeInfoCard svg {
+  height: 130px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  margin-top: -65px;
+}
+
+
+.StripeInfoCard__title {
+  text-transform: uppercase;
+  font: bold 16px sans-serif;
+  margin-bottom: 0.4em;
+  color: #b76ac4;
+  transition: 0.2s color ease;
+}
+
+.StripeInfoCard__title:after {
+  content: '\2192';
+  margin-left: 0.59em;
+}
+
+.StripeInfoCard__text {
+  color: #6b7c93;
+  font: 16px sans-serif;
+  line-height: 1.7em;
+  margin-top: 0.4em;
+}

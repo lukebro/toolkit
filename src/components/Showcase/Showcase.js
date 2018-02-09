@@ -4,8 +4,8 @@ import './Showcase.css';
 class Showcase extends React.Component {
     render() {
       return (
-        <section className="hero is-fullheight" style={{backgroundColor: this.props.color}}>
-          <div className="hero-body">
+        <section className="hero is-fullheight is-bold" style={{backgroundColor: this.props.color}}>
+          <div className="hero-body is-paddingless">
             <div className="Showcase">
                 <div style={{width: this.props.width}}>
                   {this.props.children}
@@ -18,7 +18,7 @@ class Showcase extends React.Component {
 }
 
 Showcase.defaultProps = {
-  color: '#e6ecf0',
+  color: '#fff',
   width: '100%'
 }
 

@@ -1,11 +1,13 @@
 .ProfileCard {
   background-color: #FFF;
-  border-radius:2px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
 }
 
 .ProfileCard__bg {
   width: 100%;
   height: 95px;
+  display: block;
   background-size: 100%;
   border-radius: 2px 2px 0 0;
 }
@@ -19,11 +21,11 @@
   justify-content: space-between;
 }
 
-.ProfileCard__content_top {
+.ProfileCard__user {
   display: flex;
 }
 
-.ProfileCard__avatar {
+.ProfileCard__image {
   width: 72px;
   height: 72px;
   border: 3px solid #FFF;
@@ -31,23 +33,40 @@
   margin: -30px 0 0 0;
 }
 
-.ProfileCard__identity {
+.ProfileCard__fields {
   height: 58px;
   padding: 12px 0;
   margin-left: 10px;
+  min-width: 0;
+  flex-grow: 1;
+  white-space: nowrap;
 }
 
 .ProfileCard__name {
+  display: block;
   color: #14171a;
-  font: bold 18px sans-serif;
+  font: bold 16px sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ProfileCard__name:hover {
+  text-decoration: underline;
 }
 
 .ProfileCard__handle {
+  display: block;
   color: #657786;
-  font: 15px sans-serif;
+  font: 14px sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.ProfileCard__info {
+.ProfileCard__handle:hover {
+  text-decoration: underline
+}
+
+.ProfileCard__stats {
   display: flex;
   margin-bottom: 1em;
 }
@@ -56,12 +75,19 @@
   flex-grow: 1;
 }
 
-.ProfileCard__stat_name {
-  color: #657786;
-  font: bold 11px sans-serif;
+.ProfileCard__statLink:hover .ProfileCard__label {
+  color: #FF7974;
 }
 
-.ProfileCard__stat_value {
+.ProfileCard__label {
+  display: block;
+  color: #657786;
+  font: bold 11px sans-serif;
+  transition: color 0.3s;
+}
+
+.ProfileCard__value {
+  display: block;
   color: #FF7974;
   font: bold 20px sans-serif;
 }
