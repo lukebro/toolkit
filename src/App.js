@@ -1,18 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import profileImage from './images/profile_image.jpg';
+import profileBanner from './images/profile_banner.jpg';
+import Showcase from './components/Showcase/Showcase';
+import TwitterProfileCard from './components/TwitterProfileCard/TwitterProfileCard';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Showcase color="#e6ecf0" width="288px">
+          <TwitterProfileCard data={{
+            user: {
+              name: 'Lukasz Brodowski',
+              handle: '@lukebro',
+              profileImage,
+              profileBanner,
+              url: '#',
+            },
+            stats: [
+              {key: 'Tweets', value: '29K'},
+              {key: 'Following', value: '236'},
+              {key: 'Followers', value: '1,020'},
+            ]
+          }} />
+        </Showcase>
       </div>
     );
   }
